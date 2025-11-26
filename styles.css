@@ -81,6 +81,16 @@ canvas {
     margin-bottom: 15px;
 }
 
+/* Contact */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+}
+
 /* Footer */
 footer {
     text-align: center;
