@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For graphs -->
 </head>
 <body>
 
     <header>
         <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
     <section id="about-me">
         <h2>About Me</h2>
-        <p>Hello! I'm a software engineer passionate about web development. Here is my portfolio where you can explore my projects and skills.</p>
+        <p>Hello! I'm a software engineer passionate about web development. I love creating interactive websites and applications. Here, you can explore my projects and skills.</p>
     </section>
 
     <section id="projects">
@@ -36,7 +38,26 @@
                 <h3>Project 2: E-commerce Site</h3>
                 <p>Description of the project, technologies used, and links to the project or GitHub repository.</p>
             </li>
+            <li>
+                <h3>Project 3: Portfolio with Graphs</h3>
+                <p>This portfolio includes data visualizations using Chart.js to showcase my skills and projects.</p>
+            </li>
         </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div>
+            <canvas id="skills-chart"></canvas>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div>
+            <p>"An amazing developer who always delivers work on time. Great attention to detail!" - John Doe</p>
+            <p>"Extremely professional and easy to work with. I highly recommend!" - Jane Smith</p>
+        </div>
     </section>
 
     <section id="contact">
