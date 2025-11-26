@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const contactSection = document.querySelector('#contact');
     contactSection.addEventListener('click', () => {
-        alert("You can contact me via email at your.email@example.com");
+        alert("You can contact me via email at nimannethmika@gmail.com");
     });
 
     // Creating a chart for skills
@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'],
+            labels: ['Python', 'C++', 'Java', 'Dart', 'Ruby'],
             datasets: [{
                 label: 'Skills Proficiency',
-                data: [90, 85, 75, 80, 70],
+                data: [90, 80, 70, 75, 65],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
