@@ -43,20 +43,40 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <span style={{ fontSize: 28, animation: "float 3s ease-in-out infinite" }}>
           {project.icon}
         </span>
+
         <div style={{ flex: 1 }}>
-          <h3
-            style={{
-              margin: 0,
-              fontSize: 17,
-              fontWeight: 600,
-              color: "#e2e8f0",
-              fontFamily: "'Syne', sans-serif",
-              lineHeight: 1.3,
-            }}
-          >
-            {project.title}
-          </h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: 15,
+                fontWeight: 600,
+                color: "#e2e8f0",
+                fontFamily: "'Syne', sans-serif",
+                lineHeight: 1.3,
+              }}
+            >
+              {project.title}
+            </h3>
+            {"group" in project && project.group && (
+              <span
+                style={{
+                  fontSize: 10,
+                  padding: "2px 8px",
+                  borderRadius: 20,
+                  background: "rgba(0,212,255,0.1)",
+                  color: "#00d4ff",
+                  border: "1px solid rgba(0,212,255,0.25)",
+                  fontFamily: "'Space Mono', monospace",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                GROUP
+              </span>
+            )}
+          </div>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
             {project.tags.map((tag) => (
               <span
                 key={tag}
@@ -81,7 +101,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {project.bullets.map((bullet, i) => (
           <li
             key={i}
-            style={{ display: "flex", gap: 10, marginBottom: 8, fontSize: 13, color: "#718096", lineHeight: 1.5 }}
+            style={{
+              display: "flex",
+              gap: 10,
+              marginBottom: 8,
+              fontSize: 13,
+              color: "#718096",
+              lineHeight: 1.5,
+            }}
           >
             <span style={{ color: project.color, flexShrink: 0, marginTop: 1 }}>▸</span>
             <span>{bullet}</span>

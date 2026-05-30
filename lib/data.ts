@@ -1,14 +1,15 @@
 export const NAV_LINKS = ["Home", "About", "Skills", "Projects", "Contact"];
 
 export const SKILLS_TECH = [
-  { name: "Python", level: 85 },
-  { name: "C++", level: 75 },
+  { name: "Python", level: 88 },
+  { name: "JavaScript", level: 78 },
+  { name: "Java", level: 70 },
+  { name: "C++", level: 72 },
   { name: "Dart", level: 70 },
-  { name: "Ruby", level: 65 },
   { name: "Flutter", level: 72 },
+  { name: "TensorFlow / Keras", level: 68 },
   { name: "Ruby on Rails", level: 65 },
-  { name: "gRPC", level: 68 },
-  { name: "SQLite / SQL", level: 80 },
+  { name: "MySQL / SQLite", level: 80 },
 ];
 
 export const SKILLS_SOFT = [
@@ -20,17 +21,57 @@ export const SKILLS_SOFT = [
   "Quick learning",
 ];
 
+export const SKILLS_EXTRA = [
+  "OOP",
+  "REST APIs",
+  "Networking",
+  "Distributed Systems",
+  "Software Testing",
+  "Performance Testing",
+  "Data Structures & Algorithms",
+  "Image Classification",
+  "CNN / ANN",
+  "Model Evaluation",
+];
+
+export const TOOLS = [
+  "Git", "GitHub", "Apache JMeter", "VS Code", "HTML5", "CSS3",
+];
+
 export const PROJECTS = [
+  {
+    title: "CIVIC PLAN — Land Management Portal",
+    tags: ["Python", "SQLite", "HTML/CSS/JS", "ML"],
+    color: "#00d4ff",
+    icon: "🏙️",
+    group: true,
+    bullets: [
+      "Web-based land management system with citizen registration and document submission",
+      "Admin approval workflows, property search, GIS/street-view visualization",
+      "ML-based land valuation model integrated into the platform",
+      "Performance testing with Apache JMeter for scalability and reliability analysis",
+    ],
+  },
+  {
+    title: "Mineral Density Classification System",
+    tags: ["Python", "TensorFlow", "Keras"],
+    color: "#a855f7",
+    icon: "🧠",
+    group: false,
+    bullets: [
+      "CNN/ANN image classification models with high prediction accuracy",
+      "Preprocessing pipelines, model tuning, and comprehensive evaluation",
+    ],
+  },
   {
     title: "Distributed Banking System",
     tags: ["Python", "gRPC", "SQLite"],
     color: "#00d4ff",
     icon: "🏦",
+    group: false,
     bullets: [
       "3-tier architecture: Client, Application Server, Database Server",
-      "Remote procedure calls (RPC) for inter-service communication",
-      "Secure user authentication with token-based session management",
-      "Transaction processing with validation and fee computation",
+      "RPC communication, secure authentication, and transaction validation",
       "SQLite-backed persistent data storage layer",
     ],
   },
@@ -39,9 +80,10 @@ export const PROJECTS = [
     tags: ["Dart", "Flutter"],
     color: "#7c3aed",
     icon: "🎮",
+    group: false,
     bullets: [
       "Cross-platform mobile game for Android and iOS",
-      "Full game logic, UI design, and multiple difficulty levels",
+      "Clean gameplay logic, responsive UI, and multiple difficulty levels",
     ],
   },
   {
@@ -49,19 +91,21 @@ export const PROJECTS = [
     tags: ["Ruby on Rails", "SQL"],
     color: "#10b981",
     icon: "💬",
+    group: false,
     bullets: [
       "Role-based access control and secure authentication",
-      "SQL database for quote storage and management",
+      "Database-backed content management system",
     ],
   },
   {
-    title: "C++ Dictionary Search",
+    title: "Dictionary Search Program",
     tags: ["C++"],
     color: "#f59e0b",
     icon: "📖",
+    group: false,
     bullets: [
-      "Word management system with types and definitions",
-      "Search functionality, file handling, and random word selection",
+      "Word management tool with search functionality and file handling",
+      "Random word selection feature",
     ],
   },
 ];
@@ -71,7 +115,7 @@ export const EDUCATION = [
     degree: "Bachelor of Computer Science (Software Engineering)",
     school: "Edith Cowan University, Rajagiriya",
     period: "Nov 2023 – Present",
-    note: "Final semester of 3rd year",
+    note: "Currently enrolled",
   },
   {
     degree: "Foundation Certificate in Information Technology",
@@ -87,23 +131,17 @@ export const EDUCATION = [
 
 export const REFERENCES = [
   {
-    name: "Mr. Prasanna Rathnayake",
-    role: "CEO – Silvertec Technologies",
-    phone: "+94 77 768 8665",
-    email: "prathnayake@hotmail.com",
-  },
-  {
-    name: "Mr. M.M Anura Prasanna",
-    role: "Director (Real Estate Development)",
-    phone: "+94 76 207 2487",
-    email: "anurapmu01@gmail.com",
+    name: "Available on request",
+    role: "",
+    phone: "",
+    email: "",
   },
 ];
 
 export const CONTACT_INFO = [
   { label: "Email", value: "nimannethmika@gmail.com", icon: "✉", href: "mailto:nimannethmika@gmail.com" },
   { label: "Phone", value: "+94 77 593 4822", icon: "☎", href: "tel:+94775934822" },
-  { label: "Location", value: "264/26 Weliwita Road, Kaduwela", icon: "◎", href: null },
   { label: "LinkedIn", value: "Niman Nethmika", icon: "in", href: "#" },
   { label: "GitHub", value: "Niman Nethmika", icon: "⌥", href: "#" },
+  { label: "Portfolio", value: "My Portfolio", icon: "◈", href: "#" },
 ];

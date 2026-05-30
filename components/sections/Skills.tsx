@@ -1,7 +1,7 @@
 import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SkillBar from "@/components/ui/SkillBar";
-import { SKILLS_TECH, SKILLS_SOFT } from "@/lib/data";
+import { SKILLS_TECH, SKILLS_SOFT, SKILLS_EXTRA, TOOLS } from "@/lib/data";
 
 export default function Skills() {
   return (
@@ -15,6 +15,7 @@ export default function Skills() {
           gap: 48,
         }}
       >
+        {/* Left — Technical skill bars */}
         <div>
           <div
             style={{
@@ -29,31 +30,50 @@ export default function Skills() {
           </div>
 
           {SKILLS_TECH.map((skill, index) => (
-            <SkillBar key={skill.name} name={skill.name} level={skill.level} delay={index * 80} />
+            <SkillBar
+              key={skill.name}
+              name={skill.name}
+              level={skill.level}
+              delay={index * 80}
+            />
           ))}
 
-          <div style={{ marginTop: 24 }}>
-            {["OOP", "Data Structures & Algorithms", "API Design", "Distributed Systems"].map((tag) => (
+          {/* Tools */}
+          <div
+            style={{
+              fontSize: 11,
+              fontFamily: "'Space Mono', monospace",
+              color: "#00d4ff",
+              letterSpacing: 2,
+              marginBottom: 14,
+              marginTop: 28,
+            }}
+          >
+            TOOLS & PLATFORMS
+          </div>
+          <div>
+            {TOOLS.map((tool) => (
               <span
-                key={tag}
+                key={tool}
                 style={{
                   display: "inline-block",
                   margin: "4px 6px 4px 0",
                   fontSize: 11,
                   padding: "4px 12px",
                   borderRadius: 20,
-                  background: "rgba(124,58,237,0.12)",
-                  color: "#7c3aed",
-                  border: "1px solid rgba(124,58,237,0.3)",
+                  background: "rgba(0,212,255,0.08)",
+                  color: "#00d4ff",
+                  border: "1px solid rgba(0,212,255,0.2)",
                   fontFamily: "'Space Mono', monospace",
                 }}
               >
-                {tag}
+                {tool}
               </span>
             ))}
           </div>
         </div>
 
+        {/* Right — Soft skills + concepts */}
         <div>
           <div
             style={{
@@ -72,6 +92,7 @@ export default function Skills() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
               gap: 12,
+              marginBottom: 32,
             }}
           >
             {SKILLS_SOFT.map((skill) => (
@@ -81,7 +102,7 @@ export default function Skills() {
                   background: "#0d1117",
                   border: "1px solid rgba(255,255,255,0.06)",
                   borderRadius: 8,
-                  padding: "16px 18px",
+                  padding: "14px 18px",
                   display: "flex",
                   alignItems: "center",
                   gap: 10,
@@ -102,31 +123,37 @@ export default function Skills() {
             ))}
           </div>
 
+          {/* SE Concepts */}
           <div
             style={{
-              marginTop: 32,
-              background: "#0d1117",
-              border: "1px solid rgba(0,212,255,0.1)",
-              borderRadius: 12,
-              padding: 24,
+              fontSize: 11,
+              fontFamily: "'Space Mono', monospace",
+              color: "#7c3aed",
+              letterSpacing: 2,
+              marginBottom: 14,
             }}
           >
-            <div
-              style={{
-                fontSize: 11,
-                fontFamily: "'Space Mono', monospace",
-                color: "#00d4ff",
-                letterSpacing: 2,
-                marginBottom: 16,
-              }}
-            >
-              CURRENT FOCUS
-            </div>
-            <p style={{ fontSize: 13, color: "#718096", lineHeight: 1.8, margin: 0 }}>
-              Building a Next.js portfolio with Tailwind CSS, Framer Motion,
-              and React Three Fiber — exploring the frontend ecosystem with a
-              passion for UI/UX and performance.
-            </p>
+            SE CONCEPTS & ML
+          </div>
+          <div>
+            {SKILLS_EXTRA.map((tag) => (
+              <span
+                key={tag}
+                style={{
+                  display: "inline-block",
+                  margin: "4px 6px 4px 0",
+                  fontSize: 11,
+                  padding: "4px 12px",
+                  borderRadius: 20,
+                  background: "rgba(124,58,237,0.1)",
+                  color: "#7c3aed",
+                  border: "1px solid rgba(124,58,237,0.25)",
+                  fontFamily: "'Space Mono', monospace",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>

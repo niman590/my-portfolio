@@ -44,7 +44,7 @@ export default function Hero({ scrollTo }: HeroProps) {
             opacity: 0.8,
           }}
         >
-          &lt; FRONTEND DEVELOPER /&gt;
+          &lt; CS UNDERGRADUATE · SOFTWARE ENGINEER /&gt;
         </div>
 
         <h1
@@ -71,13 +71,12 @@ export default function Hero({ scrollTo }: HeroProps) {
             marginTop: 12,
           }}
         >
-          <span style={{ animation: "blink 1s infinite" }}>▮</span> Computer
-          Science Undergraduate · Software Engineer
+          <span style={{ animation: "blink 1s infinite" }}>▮</span> Web Development · Machine Learning · Distributed Systems
         </div>
 
         <p
           style={{
-            maxWidth: 540,
+            maxWidth: 560,
             margin: "0 auto 48px",
             fontSize: 15,
             color: "#718096",
@@ -85,8 +84,9 @@ export default function Hero({ scrollTo }: HeroProps) {
             fontWeight: 300,
           }}
         >
-          Motivated CS undergraduate specializing in Software Engineering.
-          Passionate about building scalable, secure, and user-friendly applications.
+          Motivated CS undergraduate seeking internship or graduate opportunities
+          in Software Development and QA Engineering. Passionate about building
+          scalable, secure, and user-friendly applications.
         </p>
 
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
@@ -124,6 +124,30 @@ export default function Hero({ scrollTo }: HeroProps) {
           >
             CONTACT ME
           </button>
+
+          <a
+            href="/Niman_Nethmika_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Niman_Nethmika_CV.pdf"
+            style={{
+              padding: "12px 32px",
+              borderRadius: 6,
+              border: "1px solid rgba(16,185,129,0.4)",
+              cursor: "pointer",
+              background: "rgba(16,185,129,0.07)",
+              color: "#10b981",
+              fontFamily: "'Space Mono', monospace",
+              fontSize: 12,
+              letterSpacing: 2,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            ↓ DOWNLOAD CV
+          </a>
         </div>
 
         <div
