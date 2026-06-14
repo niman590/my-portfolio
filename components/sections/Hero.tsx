@@ -6,6 +6,8 @@ interface HeroProps {
   scrollTo: (id: string) => void;
 }
 
+const cvUrl = "/my-portfolio/Niman_Nethmika_CV.pdf";
+
 export default function Hero({ scrollTo }: HeroProps) {
   return (
     <section
@@ -28,12 +30,19 @@ export default function Hero({ scrollTo }: HeroProps) {
           transform: "translate(-50%,-50%)",
           width: 600,
           height: 600,
-          background: "radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
 
-      <div style={{ position: "relative", zIndex: 1, animation: "fadeUp 1s ease both" }}>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          animation: "fadeUp 1s ease both",
+        }}
+      >
         <div
           style={{
             fontFamily: "'Space Mono', monospace",
@@ -71,7 +80,8 @@ export default function Hero({ scrollTo }: HeroProps) {
             marginTop: 12,
           }}
         >
-          <span style={{ animation: "blink 1s infinite" }}>▮</span> Web Development · Machine Learning · Distributed Systems
+          <span style={{ animation: "blink 1s infinite" }}>▮</span> Web
+          Development · Machine Learning · Distributed Systems
         </div>
 
         <p
@@ -84,12 +94,20 @@ export default function Hero({ scrollTo }: HeroProps) {
             fontWeight: 300,
           }}
         >
-          Motivated CS undergraduate seeking internship or graduate opportunities
-          in Software Development and QA Engineering. Passionate about building
-          scalable, secure, and user-friendly applications.
+          Motivated CS undergraduate seeking internship or graduate
+          opportunities in Software Development and QA Engineering.
+          Passionate about building scalable, secure, and user-friendly
+          applications.
         </p>
 
-        <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <button
             onClick={() => scrollTo("Projects")}
             style={{
@@ -126,10 +144,9 @@ export default function Hero({ scrollTo }: HeroProps) {
           </button>
 
           <a
-            href="/Niman_Nethmika_CV.pdf"
+            href={cvUrl}
             target="_blank"
             rel="noopener noreferrer"
-            download="Niman_Nethmika_CV.pdf"
             style={{
               padding: "12px 32px",
               borderRadius: 6,

@@ -4,6 +4,8 @@ import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { CONTACT_INFO } from "@/lib/data";
 
+const cvUrl = "/my-portfolio/Niman_Nethmika_CV.pdf";
+
 export default function Contact() {
   return (
     <Section id="Contact">
@@ -28,11 +30,18 @@ export default function Contact() {
               lineHeight: 1.2,
             }}
           >
-            Let&apos;s <span style={{ color: "#00d4ff" }}>connect</span> and build
-            something great.
+            Let&apos;s <span style={{ color: "#00d4ff" }}>connect</span> and
+            build something great.
           </h2>
 
-          <p style={{ color: "#718096", lineHeight: 1.8, fontSize: 14, marginBottom: 32 }}>
+          <p
+            style={{
+              color: "#718096",
+              lineHeight: 1.8,
+              fontSize: 14,
+              marginBottom: 32,
+            }}
+          >
             I&apos;m currently seeking internship and graduate opportunities in
             Software Development and QA Engineering. Feel free to reach out!
           </p>
@@ -40,7 +49,12 @@ export default function Contact() {
           {CONTACT_INFO.map(({ label, value, icon, href }) => (
             <div
               key={label}
-              style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 16 }}
+              style={{
+                display: "flex",
+                gap: 16,
+                alignItems: "center",
+                marginBottom: 16,
+              }}
             >
               <div
                 style={{
@@ -59,6 +73,7 @@ export default function Contact() {
               >
                 {icon}
               </div>
+
               <div>
                 <div
                   style={{
@@ -70,20 +85,42 @@ export default function Contact() {
                 >
                   {label}
                 </div>
+
                 {href ? (
-                  <a href={href} style={{ fontSize: 13, color: "#a0aec0", textDecoration: "none" }}>
+                  <a
+                    href={href}
+                    style={{
+                      fontSize: 13,
+                      color: "#a0aec0",
+                      textDecoration: "none",
+                    }}
+                  >
                     {value}
                   </a>
                 ) : (
-                  <span style={{ fontSize: 13, color: "#a0aec0" }}>{value}</span>
+                  <span
+                    style={{
+                      fontSize: 13,
+                      color: "#a0aec0",
+                    }}
+                  >
+                    {value}
+                  </span>
                 )}
               </div>
             </div>
           ))}
 
-          <div style={{ marginTop: 32, display: "flex", gap: 12, flexWrap: "wrap" }}>
+          <div
+            style={{
+              marginTop: 32,
+              display: "flex",
+              gap: 12,
+              flexWrap: "wrap",
+            }}
+          >
             <a
-              href="/Niman_Nethmika_CV.pdf"
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -103,9 +140,11 @@ export default function Contact() {
             >
               ↗ VIEW CV
             </a>
+
             <a
-              href="/Niman_Nethmika_CV.pdf"
-              download="Niman_Nethmika_CV.pdf"
+              href={cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 padding: "11px 24px",
                 borderRadius: 6,
@@ -161,9 +200,12 @@ export default function Contact() {
               >
                 {field.toUpperCase()}
               </label>
+
               <input
                 type={field === "Email" ? "email" : "text"}
-                placeholder={field === "Name" ? "Your name" : "your@email.com"}
+                placeholder={
+                  field === "Name" ? "Your name" : "your@email.com"
+                }
                 style={{
                   width: "100%",
                   padding: "12px 16px",
@@ -193,6 +235,7 @@ export default function Contact() {
             >
               MESSAGE
             </label>
+
             <textarea
               rows={5}
               placeholder="Tell me about your opportunity..."
