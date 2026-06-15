@@ -35,7 +35,12 @@ export const SKILLS_EXTRA = [
 ];
 
 export const TOOLS = [
-  "Git", "GitHub", "Apache JMeter", "VS Code", "HTML5", "CSS3",
+  "Git",
+  "GitHub",
+  "Apache JMeter",
+  "VS Code",
+  "HTML5",
+  "CSS3",
 ];
 
 export const PROJECTS = [
@@ -139,9 +144,34 @@ export const REFERENCES = [
 ];
 
 export const CONTACT_INFO = [
-  { label: "Email", value: "nimannethmika@gmail.com", icon: "✉", href: "mailto:nimannethmika@gmail.com" },
-  { label: "Phone", value: "+94 77 593 4822", icon: "☎", href: "tel:+94775934822" },
-  { label: "LinkedIn", value: "Niman Nethmika", icon: "in", href: "#" },
-  { label: "GitHub", value: "Niman Nethmika", icon: "⌥", href: "#" },
-  { label: "Portfolio", value: "My Portfolio", icon: "◈", href: "#" },
+  {
+    label: "Email",
+    value: "nimannethmika@gmail.com",
+    icon: "✉",
+    href: "mailto:nimannethmika@gmail.com",
+  },
+  {
+    label: "Phone",
+    value: "+94 77 593 4822",
+    icon: "☎",
+    href: "tel:+94775934822",
+  },
+  {
+    label: "LinkedIn",
+    value: "Niman Nethmika",
+    icon: "in",
+    href: "https://www.linkedin.com/in/niman-nethmika-98707b308",
+  },
+  {
+    label: "GitHub",
+    value: "Niman Nethmika",
+    icon: "⌥",
+    href: "https://github.com/niman590",
+  },
+  {
+    label: "Portfolio",
+    value: "My Portfolio",
+    icon: "◈",
+    href: "https://niman590.github.io/my-portfolio/",
+  },
 ];

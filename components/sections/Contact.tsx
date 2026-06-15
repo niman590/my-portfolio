@@ -5,6 +5,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import { CONTACT_INFO } from "@/lib/data";
 
 const cvUrl = "/my-portfolio/Niman_Nethmika_CV.pdf";
+const formspreeUrl = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function Contact() {
   return (
@@ -19,7 +20,6 @@ export default function Contact() {
           alignItems: "start",
         }}
       >
-        {/* Left — contact info */}
         <div>
           <h2
             style={{
@@ -89,6 +89,8 @@ export default function Contact() {
                 {href ? (
                   <a
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       fontSize: 13,
                       color: "#a0aec0",
@@ -98,12 +100,7 @@ export default function Contact() {
                     {value}
                   </a>
                 ) : (
-                  <span
-                    style={{
-                      fontSize: 13,
-                      color: "#a0aec0",
-                    }}
-                  >
+                  <span style={{ fontSize: 13, color: "#a0aec0" }}>
                     {value}
                   </span>
                 )}
@@ -165,8 +162,9 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right — contact form */}
-        <div
+        <form
+          action={formspreeUrl}
+          method="POST"
           style={{
             background: "#0d1117",
             border: "1px solid rgba(255,255,255,0.06)",
@@ -186,41 +184,73 @@ export default function Contact() {
             SEND A MESSAGE
           </div>
 
-          {["Name", "Email"].map((field) => (
-            <div key={field} style={{ marginBottom: 16 }}>
-              <label
-                style={{
-                  display: "block",
-                  fontSize: 11,
-                  color: "#4a5568",
-                  fontFamily: "'Space Mono', monospace",
-                  letterSpacing: 1,
-                  marginBottom: 8,
-                }}
-              >
-                {field.toUpperCase()}
-              </label>
+          <div style={{ marginBottom: 16 }}>
+            <label
+              style={{
+                display: "block",
+                fontSize: 11,
+                color: "#4a5568",
+                fontFamily: "'Space Mono', monospace",
+                letterSpacing: 1,
+                marginBottom: 8,
+              }}
+            >
+              NAME
+            </label>
 
-              <input
-                type={field === "Email" ? "email" : "text"}
-                placeholder={
-                  field === "Name" ? "Your name" : "your@email.com"
-                }
-                style={{
-                  width: "100%",
-                  padding: "12px 16px",
-                  borderRadius: 8,
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  background: "#080c14",
-                  color: "#e2e8f0",
-                  fontSize: 14,
-                  outline: "none",
-                  fontFamily: "'DM Sans', sans-serif",
-                  boxSizing: "border-box",
-                }}
-              />
-            </div>
-          ))}
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              style={{
+                width: "100%",
+                padding: "12px 16px",
+                borderRadius: 8,
+                border: "1px solid rgba(255,255,255,0.08)",
+                background: "#080c14",
+                color: "#e2e8f0",
+                fontSize: 14,
+                outline: "none",
+                fontFamily: "'DM Sans', sans-serif",
+                boxSizing: "border-box",
+              }}
+            />
+          </div>
+
+          <div style={{ marginBottom: 16 }}>
+            <label
+              style={{
+                display: "block",
+                fontSize: 11,
+                color: "#4a5568",
+                fontFamily: "'Space Mono', monospace",
+                letterSpacing: 1,
+                marginBottom: 8,
+              }}
+            >
+              EMAIL
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              style={{
+                width: "100%",
+                padding: "12px 16px",
+                borderRadius: 8,
+                border: "1px solid rgba(255,255,255,0.08)",
+                background: "#080c14",
+                color: "#e2e8f0",
+                fontSize: 14,
+                outline: "none",
+                fontFamily: "'DM Sans', sans-serif",
+                boxSizing: "border-box",
+              }}
+            />
+          </div>
 
           <div style={{ marginBottom: 20 }}>
             <label
@@ -237,8 +267,10 @@ export default function Contact() {
             </label>
 
             <textarea
+              name="message"
               rows={5}
               placeholder="Tell me about your opportunity..."
+              required
               style={{
                 width: "100%",
                 padding: "12px 16px",
@@ -256,6 +288,7 @@ export default function Contact() {
           </div>
 
           <button
+            type="submit"
             style={{
               width: "100%",
               padding: "14px",
@@ -272,7 +305,7 @@ export default function Contact() {
           >
             SEND_MESSAGE →
           </button>
-        </div>
+        </form>
       </div>
     </Section>
   );
