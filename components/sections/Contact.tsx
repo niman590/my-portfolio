@@ -5,7 +5,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import { CONTACT_INFO } from "@/lib/data";
 
 const cvUrl = "/my-portfolio/Niman_Nethmika_CV.pdf";
-const formspreeUrl = "https://formspree.io/f/YOUR_FORM_ID";
+const formspreeUrl = "https://formspree.io/f/xwvjynre";
 
 export default function Contact() {
   return (
